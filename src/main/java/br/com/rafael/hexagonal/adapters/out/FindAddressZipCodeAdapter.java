@@ -19,7 +19,7 @@ public class FindAddressZipCodeAdapter implements FindAdrresByZipCodeOutputPort 
 
     @Override
     public Address find(String zipCode) {
-         var  addressResponse  = findAddressCodeClient.find(zipCode);
+        AddressResponse addressResponse  = findAddressCodeClient.find(zipCode);
         return addressResponseMapper.toAddress(addressResponse);
     }
 }

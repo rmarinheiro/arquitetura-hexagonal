@@ -2,3 +2,9 @@ rafael:
   client:
     address:
       url: http://localhost:8082/addresses
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27817/hexagonal
+

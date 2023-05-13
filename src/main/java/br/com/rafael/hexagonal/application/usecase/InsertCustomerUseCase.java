@@ -1,11 +1,11 @@
 package br.com.rafael.hexagonal.application.usecase;
 
-import br.com.rafael.hexagonal.application.domain.Address;
 import br.com.rafael.hexagonal.application.domain.Customer;
+import br.com.rafael.hexagonal.application.ports.in.InsertCustomerInputPort;
 import br.com.rafael.hexagonal.application.ports.out.FindAdrresByZipCodeOutputPort;
 import br.com.rafael.hexagonal.application.ports.out.InsertOutPutPort;
 
-public class InsertCustomerUseCase {
+public class InsertCustomerUseCase implements InsertCustomerInputPort {
     private final FindAdrresByZipCodeOutputPort findAdrresByZipCodeOutputPort;
 
     private  final InsertOutPutPort insertOutPutPort;
@@ -22,4 +22,5 @@ public class InsertCustomerUseCase {
         insertOutPutPort.insert(customer);
 
     }
+
 }
