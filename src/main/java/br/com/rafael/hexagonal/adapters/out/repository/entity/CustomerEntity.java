@@ -3,6 +3,8 @@ package br.com.rafael.hexagonal.adapters.out.repository.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Objects;
+
 @Document(collection = "customer")
 public class CustomerEntity {
     @Id
@@ -10,6 +12,14 @@ public class CustomerEntity {
 
     private String name;
     private AddressEntity address;
+
+    private String cpf;
+
+    private Boolean isValidCpf;
+
+    public CustomerEntity() {
+    }
+
 
     public String getId() {
         return id;
@@ -35,6 +45,7 @@ public class CustomerEntity {
         this.address = address;
     }
 
+
     public String getCpf() {
         return cpf;
     }
@@ -43,23 +54,22 @@ public class CustomerEntity {
         this.cpf = cpf;
     }
 
-    public Boolean getValidCPF() {
-        return isValidCPF;
+    public Boolean getIsValidCpf() {
+
+        return isValidCpf;
     }
 
-    public void setValidCPF(Boolean validCPF) {
-        isValidCPF = validCPF;
+    public void setIsValidCpf(Boolean isValidCpf) {
+
+        this.isValidCpf = isValidCpf;
     }
 
-    private String cpf;
 
-    private Boolean isValidCPF;
-
-    public CustomerEntity(String id, String name, AddressEntity address, String cpf, Boolean isValidCPF) {
+    public CustomerEntity(String id, String name, AddressEntity address, String cpf, Boolean isValidCpf) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.cpf = cpf;
-        this.isValidCPF = isValidCPF;
+        this.isValidCpf = isValidCpf;
     }
 }

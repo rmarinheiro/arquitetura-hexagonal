@@ -1,16 +1,30 @@
 package br.com.rafael.hexagonal.adapters.in.controller.response;
 
-import br.com.rafael.hexagonal.application.domain.Address;
-
 public class CustomerResponse {
 
     private String name;
 
-    private AddressResponse adress;
+    private AddressResponse address;
 
     private String cpf;
 
-    private Boolean isValid;
+    private Boolean isValidCpf;
+
+    public AddressResponse getAddress() {
+        return address;
+    }
+
+    public void setAddress(AddressResponse address) {
+        this.address = address;
+    }
+
+    public Boolean getIsValidCpf() {
+        return isValidCpf;
+    }
+
+    public void setIsValidCpf(Boolean isValidCpf) {
+        isValidCpf = isValidCpf;
+    }
 
 
     public String getName() {
@@ -21,14 +35,6 @@ public class CustomerResponse {
         this.name = name;
     }
 
-    public AddressResponse getAdress() {
-        return adress;
-    }
-
-    public void setAdress(AddressResponse adress) {
-        this.adress = adress;
-    }
-
     public String getCpf() {
         return cpf;
     }
@@ -37,19 +43,12 @@ public class CustomerResponse {
         this.cpf = cpf;
     }
 
-    public Boolean getValid() {
-        return isValid;
-    }
 
-    public void setValid(Boolean valid) {
-        isValid = valid;
-    }
-
-    public CustomerResponse(String name, AddressResponse adress, String cpf, Boolean isValid) {
+    public CustomerResponse(String name, AddressResponse address, String cpf, Boolean isValidCpf) {
         this.name = name;
-        this.adress = adress;
+        this.address = address;
         this.cpf = cpf;
-        this.isValid = isValid;
+        this.isValidCpf = isValidCpf;
     }
 }
 

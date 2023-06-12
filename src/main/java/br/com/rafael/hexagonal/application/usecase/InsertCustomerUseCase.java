@@ -21,8 +21,8 @@ public class InsertCustomerUseCase implements InsertCustomerInputPort {
         this.sendCpfForValidationOutPutPort = sendCpfForValidationOutPutPort;
     }
     public void insert(Customer customer, String zipCode) {
-        var  address = findAdrresByZipCodeOutputPort.find(zipCode);
-        customer.setAdress(address);
+        var address = findAdrresByZipCodeOutputPort.find(zipCode);
+        customer.setAddress(address);
         insertOutPutPort.insert(customer);
         sendCpfForValidationOutPutPort.send(customer.getCpf());
 

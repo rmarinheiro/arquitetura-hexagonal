@@ -11,6 +11,8 @@ public class CustomerRequest {
     @NotBlank
     private String zipCode;
 
+
+
     @NotBlank
     public String getName() {
         return name;
@@ -36,6 +38,10 @@ public class CustomerRequest {
         this.zipCode = zipCode;
     }
 
-
+    public CustomerRequest(String name, String cpf, String zipCode) {
+        this.name = name;
+        this.cpf = cpf;
+        this.zipCode = zipCode;
+    }
 
 }

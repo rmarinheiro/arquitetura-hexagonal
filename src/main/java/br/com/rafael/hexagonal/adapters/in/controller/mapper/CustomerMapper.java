@@ -10,10 +10,11 @@ import org.mapstruct.Mapping;
 public interface CustomerMapper {
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "address",ignore = true)
-    @Mapping(target = "isValid",ignore = true)
+    @Mapping(target = "address", ignore = true)
+    @Mapping(target = "isValidCpf", ignore = true)
     Customer toCustomer(CustomerRequest customRequest);
-
+    @Mapping(target = "address", ignore = true)
+    @Mapping(target = "isValidCpf", ignore = true)
     CustomerResponse toCustomerResponse(Customer customer);
 
 }

@@ -11,7 +11,7 @@ public class CustomerMessage {
 
     private String cpf;
 
-    private Boolean isValid;
+    private Boolean isValidCpf;
 
     public String getId() {
         return id;
@@ -45,19 +45,19 @@ public class CustomerMessage {
         this.cpf = cpf;
     }
 
-    public Boolean getValid() {
-        return isValid;
+    public Boolean getIsValidCpf() {
+        return isValidCpf;
     }
 
-    public void setValid(Boolean valid) {
-        isValid = valid;
+    public void setIsValidCpf(Boolean isValidCpf) {
+        this.isValidCpf = isValidCpf;
     }
 
-    public CustomerMessage(String id, String name, String zipCode, String cpf, Boolean isValid) {
+    public CustomerMessage(String id, String name, String zipCode, String cpf, Boolean isValidCpf) {
         this.id = id;
         this.name = name;
         this.zipCode = zipCode;
         this.cpf = cpf;
-        this.isValid = isValid;
+        this.isValidCpf = isValidCpf;
     }
 }

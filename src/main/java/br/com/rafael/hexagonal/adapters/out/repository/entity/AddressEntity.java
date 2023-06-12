@@ -37,4 +37,6 @@ public class AddressEntity {
         this.city = city;
         this.state = state;
     }
+
+
 }
