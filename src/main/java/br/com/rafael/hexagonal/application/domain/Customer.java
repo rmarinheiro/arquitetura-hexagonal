@@ -60,4 +60,7 @@ public class Customer {
         this.isValidCpf = isValidCpf;
     }
 
+    public Customer() {
+        this.isValidCpf=false;
+    }
 }

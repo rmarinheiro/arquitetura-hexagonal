@@ -13,8 +13,7 @@ public interface CustomerMapper {
     @Mapping(target = "address", ignore = true)
     @Mapping(target = "isValidCpf", ignore = true)
     Customer toCustomer(CustomerRequest customRequest);
-    @Mapping(target = "address", ignore = true)
-    @Mapping(target = "isValidCpf", ignore = true)
+
     CustomerResponse toCustomerResponse(Customer customer);
 
 }

@@ -1,6 +1,5 @@
 package br.com.rafael.hexagonal.adapters.out;
 
-import br.com.rafael.hexagonal.adapters.out.repository.entity.CustomerEntity;
 import br.com.rafael.hexagonal.adapters.out.repository.entity.mapper.CustomerEntityMapper;
 import br.com.rafael.hexagonal.adapters.out.repository.entity.repository.CustomerRepository;
 import br.com.rafael.hexagonal.application.domain.Customer;
@@ -14,7 +13,7 @@ public class FindCustomerIdAdapter implements FindCustomerByIdOutputPort {
 
     @Autowired
     private CustomerRepository customerRepository;
-
+    @Autowired
     private CustomerEntityMapper customerEntityMapper;
     @Override
     public Optional<Customer> find(String id) {

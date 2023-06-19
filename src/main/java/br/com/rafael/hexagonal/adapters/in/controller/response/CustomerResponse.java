@@ -18,14 +18,13 @@ public class CustomerResponse {
         this.address = address;
     }
 
-    public Boolean getIsValidCpf() {
+    public Boolean getValidCpf() {
         return isValidCpf;
     }
 
-    public void setIsValidCpf(Boolean isValidCpf) {
+    public void setValidCpf(Boolean validCpf) {
         isValidCpf = isValidCpf;
     }
-
 
     public String getName() {
         return name;
@@ -50,5 +49,6 @@ public class CustomerResponse {
         this.cpf = cpf;
         this.isValidCpf = isValidCpf;
     }
+
 }
 

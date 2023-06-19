@@ -72,4 +72,5 @@ public class CustomerEntity {
         this.cpf = cpf;
         this.isValidCpf = isValidCpf;
     }
+
 }
